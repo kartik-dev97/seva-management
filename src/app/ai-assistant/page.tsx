@@ -9,10 +9,16 @@ import { Send, Sparkles, TrendingUp, FileText } from 'lucide-react';
 import { useState } from 'react';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 
-const initialMessages = [
+interface Message {
+    id: string;
+    role: 'user' | 'assistant';
+    content: string;
+}
+
+const initialMessages: Message[] = [
     {
         id: '1',
-        role: 'assistant' as const,
+        role: 'assistant',
         content: 'Hello! I\'m your AI assistant for Seva Foundation. I can help you with insights, reports, and analysis. What would you like to know?',
     },
 ];
@@ -67,8 +73,8 @@ export default function AIAssistantPage() {
                                     )}
                                     <div
                                         className={`max-w-[80%] rounded-lg p-4 ${message.role === 'user'
-                                                ? 'bg-primary text-primary-foreground'
-                                                : 'bg-muted'
+                                            ? 'bg-primary text-primary-foreground'
+                                            : 'bg-muted'
                                             }`}
                                     >
                                         <p className="text-sm">{message.content}</p>

@@ -36,7 +36,7 @@ import { format, differenceInDays } from 'date-fns';
 
 const statusColors = {
     [EventStatus.UPCOMING]: 'bg-blue-500/10 text-blue-600 dark:text-blue-400',
-    [EventStatus.ONGOING]: 'bg-green-500/10 text-green-600 dark:text-green-400',
+    [EventStatus.IN_PROGRESS]: 'bg-green-500/10 text-green-600 dark:text-green-400',
     [EventStatus.COMPLETED]: 'bg-gray-500/10 text-gray-600 dark:text-gray-400',
     [EventStatus.CANCELLED]: 'bg-red-500/10 text-red-600 dark:text-red-400',
 };
